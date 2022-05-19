@@ -1,4 +1,6 @@
-export const config: WebdriverIO.Config = {
+import type { Options } from '@wdio/types'
+
+export const config: Options.Testrunner = {
     //
     // ====================
     // Runner Configuration
@@ -27,9 +29,9 @@ export const config: WebdriverIO.Config = {
         }
         // tsconfig-paths is only used if "tsConfigPathsOpts" are provided, if you
         // do please make sure "tsconfig-paths" is installed as dependency
-        //tsConfigPathsOpts: {
-        //    baseUrl: './'
-        //}
+        // tsConfigPathsOpts: {
+        //     baseUrl: './'
+        // }
     },
     //
     // ==================
@@ -97,7 +99,7 @@ export const config: WebdriverIO.Config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'error',
     //
     // Set specific log levels per logger
     // loggers:
@@ -121,7 +123,8 @@ export const config: WebdriverIO.Config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    //baseUrl: 'http://localhost',
+    baseUrl: 'https://the-internet.herokuapp.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -351,6 +354,6 @@ export const config: WebdriverIO.Config = {
     * @param {String} oldSessionId session ID of the old session
     * @param {String} newSessionId session ID of the new session
     */
-    //onReload: function(oldSessionId, newSessionId) {
-    //}
+    // onReload: function(oldSessionId, newSessionId) {
+    // }
 }
